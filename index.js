@@ -40,7 +40,7 @@ function execFindHotTrends(url, filterPath, hottrends, cb) {
 	//hottrends = ["reeleccion de macri", "nisman", "fardin"];
 	//    console.log("request " + url);
 	
-
+	console.log("TRENDS HOME: " + url)
 	request(url, { timeout: 10000 }, (error, response, body)=> {
 
 		if (error || !response) {

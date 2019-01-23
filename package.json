@@ -1,0 +1,65 @@
+{
+  "_from": "trends-homepage",
+  "_id": "trends-homepage@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ueHPHRb8QcVgAimAZIUjj6dgLvw2wKVTTYEPfBNiOw0uK0XlUb65ZrWHBL+MQVE3y0xj6MlsIjc6sXO0XA4EsA==",
+  "_location": "/trends-homepage",
+  "_phantomChildren": {
+    "asynckit": "0.4.0",
+    "combined-stream": "1.0.6",
+    "css-select": "1.2.0",
+    "dom-serializer": "0.1.0",
+    "entities": "1.1.1",
+    "fast-json-stable-stringify": "2.0.0",
+    "forever-agent": "0.6.1",
+    "har-schema": "2.0.0",
+    "htmlparser2": "3.9.2",
+    "is-typedarray": "1.0.0",
+    "isstream": "0.1.2",
+    "json-stringify-safe": "5.0.1",
+    "jsprim": "1.4.1",
+    "parse5": "3.0.3",
+    "performance-now": "2.1.0",
+    "psl": "1.1.31",
+    "safe-buffer": "5.1.2",
+    "sshpk": "1.14.1",
+    "uri-js": "4.2.2"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "trends-homepage",
+    "name": "trends-homepage",
+    "escapedName": "trends-homepage",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/trends-homepage/-/trends-homepage-1.0.0.tgz",
+  "_shasum": "0e305ffffa75d5280a9743c03ec4ea7068d50f1f",
+  "_spec": "trends-homepage",
+  "_where": "C:\\Users\\Kev\\nodejs\\cms",
+  "author": {
+    "name": "Lio"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "elasticlunr": "^0.9.5",
+    "keyword-extractor": "0.0.15",
+    "request": "^2.88.0"
+  },
+  "deprecated": false,
+  "description": "Rank the Google Trends words on a home page",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "trends-homepage",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

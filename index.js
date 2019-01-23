@@ -41,7 +41,7 @@ function execFindHotTrends(url, filterPath, hottrends, cb) {
 	//    console.log("request " + url);
 	
 
-	request(url, (error, response, body)=> {
+	request(url, { timeout: 10000 }, (error, response, body)=> {
 
 		if (error || !response) {
 			return cb("Got an error: " + error + ", response: " + !!response);

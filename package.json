@@ -1,6 +1,6 @@
 {
   "_from": "trends-homepage",
-  "_id": "trends-homepage@1.0.0",
+  "_id": "trends-homepage@1.0.1",
   "_inBundle": false,
   "_integrity": "sha512-ueHPHRb8QcVgAimAZIUjj6dgLvw2wKVTTYEPfBNiOw0uK0XlUb65ZrWHBL+MQVE3y0xj6MlsIjc6sXO0XA4EsA==",
   "_location": "/trends-homepage",
@@ -61,5 +61,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

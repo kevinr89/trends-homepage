@@ -5,7 +5,7 @@ const cheerio = require('cheerio');
 const elasticlunr = require('elasticlunr');
 
 
-const urlGTrends = 'https://trends.google.com/trends/hottrends/visualize/internal/data'
+const urlGTrends = 'https://trends.google.com/trends/api/dailytrends?hl=es&tz=180&geo=AR&ns=15'
 
 
 function getResultTrendsNow(urlSitio, filterPath, cb) {
@@ -16,10 +16,24 @@ function getResultTrendsNow(urlSitio, filterPath, cb) {
 	
 	request(urlGTrends, (error, response, body)=> {
 	  if (!error && response.statusCode === 200) {
-	    const resp = JSON.parse(body)
-	    //console.log("Got a response: ", resp.argentina)
+	  	var s = body.substring(5);
+	    const resp = JSON.parse(s)
 
-	    execFindHotTrends(urlSitio, filterPath, resp.argentina, cb);
+	    if (!resp || !resp.default || !resp.default.trendingSearchesDays) {
+			return cb("Got an error: parseando body desde Google Trends: " + body);
+	    }
+
+	    var arrayTrends = resp.default.trendingSearchesDays[0].trendingSearches;
+
+	    var arrayTrendsKeys = [];
+	    for (var i in arrayTrends) {
+	    	var t = arrayTrends[i];
+	    	if (t && t.title && t.title.query)
+	    		arrayTrendsKeys.push(t.title.query)
+	    }
+
+
+	    execFindHotTrends(urlSitio, filterPath, arrayTrendsKeys, cb);
 	  } else {
 	    return cb("Got an error: " + error + ", status code: " + response.statusCode);
 	  }
